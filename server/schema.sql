@@ -1,5 +1,4 @@
-
-DROP DATABASE chat;
+DROP DATABASE IF EXISTS chat;
 
 CREATE DATABASE chat;
 
@@ -24,7 +23,7 @@ CREATE TABLE `chatroom` (
 );
 
 ALTER TABLE `messages` ADD FOREIGN KEY (username) REFERENCES `users` (`username`);
-ALTER TABLE `messages` ADD FOREIGN KEY (roomname) REFERENCES `chatroom` (`roomname`);
+-- ALTER TABLE `messages` ADD FOREIGN KEY (roomname) REFERENCES `chatroom` (`roomname`);
 /* Create other tables and define schemas for them here! */
 
 
